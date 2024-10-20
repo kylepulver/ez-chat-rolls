@@ -1,0 +1,65 @@
+{
+    "id": "ez-chat-rolls",
+    "title": "EZ Chat Rolls",
+    "description": "Parse chat messages for rolls more generously.",
+  "authors": [
+    {
+      "name": "kyle pulver",
+      "url": "https://github.com/kylepulver/ez-chat-rolls"
+    }
+  ],
+  "url": "https://github.com/kylepulver/ez-chat-rolls",
+  "version": "1",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12.331",
+    "maximum": "12"
+  },
+  "esmodules": [
+    "chatrolls.js"
+  ],
+  "scripts": [
+  ],
+  "styles": [
+    "chatrolls.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "en.json"
+    }
+  ],
+  "packs": [],
+  "relationships": {
+    "systems": [
+    ],
+    "requires": [
+    ],
+    "optional": [],
+    "flags": {
+      "optional": []
+    }
+  },
+  "flags": {
+    "hotReload": {
+      "extensions": [
+        "css",
+        "html",
+        "hbs",
+        "json"
+      ],
+      "paths": [
+        "styles",
+        "languages"
+      ]
+    }
+  },
+  "socket": false,
+  "manifest": "https://raw.githubusercontent.com/kylepulver/ez-chat-rolls/main/module.json",
+  "download": "https://github.com/kylepulver/ez-chat-rolls/archive/refs/heads/main.zip",
+  "readme": "https://github.com/kylepulver/ez-chat-rolls",
+  "protected": false,
+  "coreTranslation": false,
+  "library": false
+}
