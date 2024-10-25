@@ -1,5 +1,11 @@
 console.log("EZ Chat Rolls | Loaded");
 
+Hooks.on("renderChatLog", (app, html, data) => {
+    html.on("click", ".chat-control-icon .fa-dice-d20", () => {
+        app.processMessage("/r d20")
+    })
+})
+
 Hooks.on("preCreateChatMessage", (document, data, options, userId) => {
     // console.log(document, data, options, userId);
     if (document.rolls.length) return true;
@@ -12,7 +18,6 @@ Hooks.on("preCreateChatMessage", (document, data, options, userId) => {
         return false;
     }
     catch(e) {
-        // console.log(e)
         return true;
     }
 })
