@@ -1,11 +1,18 @@
 console.log("EZ Chat Rolls | Loaded");
 
-/*
+Hooks.on("preCreateChatMessage", (document, data, options, userId) => {
+    // console.log(document, data, options, userId);
+    if (document.rolls.length) return true;
+    if (document.content.startsWith("/")) return true;
 
-always try to parse a chat message sent through the text box as a roll
-
-only try if it doesnt start with '/' or something
-
-if it fails, then send the chat message
-
-*/
+    try {
+        const r = new Roll(document.content);
+        r.evaluateSync({strict: false});
+        new Roll(document.content).toMessage();
+        return false;
+    }
+    catch(e) {
+        // console.log(e)
+        return true;
+    }
+})
